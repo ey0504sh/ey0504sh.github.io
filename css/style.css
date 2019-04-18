@@ -87,6 +87,20 @@
     margin-block-end: 0.1em;
 }
 
+#announcement h2,
+#announcement h4,
+#announcement h5,
+#announcement h6 {
+    font-family: "Nanum Gothic";
+    margin-block-start: 0.7em;
+    margin-block-end: 0.1em;
+}
+
+#location img {
+    width: 100%;
+    min-width: 900px;
+}
+
 .dancing_script {
     font-family: 'Dancing Script'
 }
