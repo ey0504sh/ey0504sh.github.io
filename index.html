@@ -15,136 +15,129 @@
 <body>
 
     <section id="top">
-        <div id="top_container">
-<!--            <div id="top_slideshow">-->
-<!--                <div>-->
-<!--                    <img src="gallery/900w/IMG_0826.jpg" height="600" width="900"/>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <img src="gallery/900w/IMG_0867.jpg" height="600" width="900"/>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <img src="gallery/900w/IMG_0905.jpg" height="600" width="900"/>-->
-<!--                </div>-->
-<!--            </div>-->
-            <div id="top_slideshow">
-                <div>
-                    <img src="gallery/900w/IMG_1529.jpg" height="600" width="900"/>
+        <div>
+            <div id="top_container">
+    <!--            <div id="top_slideshow">-->
+    <!--                <div>-->
+    <!--                    <img src="gallery/900w/IMG_0826.jpg" height="600" width="900"/>-->
+    <!--                </div>-->
+    <!--                <div>-->
+    <!--                    <img src="gallery/900w/IMG_0867.jpg" height="600" width="900"/>-->
+    <!--                </div>-->
+    <!--                <div>-->
+    <!--                    <img src="gallery/900w/IMG_0905.jpg" height="600" width="900"/>-->
+    <!--                </div>-->
+    <!--            </div>-->
+                <div id="top_image">
                 </div>
-                <div>
-                    <img src="gallery/900w/IMG_1529.jpg" height="600" width="900"/>
-                </div>
-            </div>
 
-            <div id="top_announcement">
-                <div>
+                <div id="top_announcement">
                     <p>
-                    <h2 class="dancing_script"><span class="point_color">W</span>edding.</h2>
+                    <h2 class="dancing_script"><span class="point_color">W</span>edding</h2>
                     <h2>은용 ♡ 승환</h2>
-                    <h2>2019. 5. 4. 3 PM</h2>
+                    <h2>2019. &nbsp;5. &nbsp;4. &nbsp;3 PM</h2>
                     </p>
-                    <br>
-                    <br>
-                    <br>
-                <div id="countdown">
-                    <ul>
-                        <li>
-                            <h2 id="d_day">
-                                D-
-                            </h2>
-                        </li>
-                        <li>
-                            <h2 id="countdown_days">--</h2>
-                            <h4>days</h4>
-                        </li>
-                        <li>
-                            <h2 id="countdown_hours">--</h2>
-                            <h4>hours</h4>
-                        </li>
-                        <li>
-                            <h2 id="countdown_min">--</h2>
-                            <h4>min</h4>
-                        </li>
-                        <li>
-                            <h2 id="countdown_sec">--</h2>
-                            <h4>sec</h4>
-                        </li>
-                    </ul>
-                </div>
+
+                    <div id="countdown">
+                        <ul>
+                            <div align="center">
+                                <li>
+                                    <h2 id="d_day">
+                                        D-
+                                    </h2>
+                                </li>
+                                <li>
+                                    <h2 id="countdown_days">--</h2>
+                                    <h4>days</h4>
+                                </li>
+                                <li>
+                                    <h2 id="countdown_hours">--</h2>
+                                    <h4>hours</h4>
+                                </li>
+                                <li>
+                                    <h2 id="countdown_min">--</h2>
+                                    <h4>min</h4>
+                                </li>
+                                <li>
+                                    <h2 id="countdown_sec">--</h2>
+                                    <h4>sec</h4>
+                                </li>
+                                <li>
+                                    <h2></h2>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <!-- Display the countdown timer in an element -->
+            <script>
+                // Set the date we're counting down to
+                let countDownDate = new Date("May 4, 2019 15:00:00").getTime();
+
+                // Update the count down every 1 second
+                let x = setInterval(function() {
+
+                    // Get todays date and time
+                    let now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    let distance = countDownDate - now;
+
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        document.getElementById("d_day").innerHTML = "D+"
+                        distance = -(distance);
+                        // Time calculations for days, hours, minutes and seconds
+                        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Display the result in the element with id
+                        document.getElementById("countdown_days").innerHTML = days;
+                        document.getElementById("countdown_hours").innerHTML = hours;
+                        document.getElementById("countdown_min").innerHTML = minutes;
+                        document.getElementById("countdown_sec").innerHTML = seconds;
+                    } else {
+                        // Time calculations for days, hours, minutes and seconds
+                        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Display the result in the element with id
+                        document.getElementById("countdown_days").innerHTML = days;
+                        document.getElementById("countdown_hours").innerHTML = hours;
+                        document.getElementById("countdown_min").innerHTML = minutes;
+                        document.getElementById("countdown_sec").innerHTML = seconds;
+                    }
+                }, 1000);
+            </script>
         </div>
-
-        <!-- Display the countdown timer in an element -->
-
-
-        <script>
-            // Set the date we're counting down to
-            let countDownDate = new Date("May 4, 2019 15:00:00").getTime();
-
-            // Update the count down every 1 second
-            let x = setInterval(function() {
-
-                // Get todays date and time
-                let now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                let distance = countDownDate - now;
-
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    document.getElementById("d_day").innerHTML = "D+"
-                    distance = -(distance);
-                    // Time calculations for days, hours, minutes and seconds
-                    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    // Display the result in the element with id
-                    document.getElementById("countdown_days").innerHTML = days;
-                    document.getElementById("countdown_hours").innerHTML = hours;
-                    document.getElementById("countdown_min").innerHTML = minutes;
-                    document.getElementById("countdown_sec").innerHTML = seconds;
-                } else {
-                    // Time calculations for days, hours, minutes and seconds
-                    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    // Display the result in the element with id
-                    document.getElementById("countdown_days").innerHTML = days;
-                    document.getElementById("countdown_hours").innerHTML = hours;
-                    document.getElementById("countdown_min").innerHTML = minutes;
-                    document.getElementById("countdown_sec").innerHTML = seconds;
-                }
-            }, 1000);
-        </script>
     </section>
     <sectrion id="content">
         <sction id="announcement">
-
         </sction>
         <section id="gallery">
-            갤러리
         </section>
     </sectrion>
     <section id="footer">
     </section>
 
     <script src="js/jquery-3.4.0.min.js"></script>
-<!--    <script>-->
-<!--        $("#top_slideshow > div:gt(0)").hide();-->
+    <script>
+        $("#top_slideshow > div:gt(0)").hide();
 
-<!--        setInterval(function() {-->
-<!--            $('#top_slideshow > div:first')-->
-<!--                .fadeOut(5000)-->
-<!--                .next()-->
-<!--                .fadeIn(5000)-->
-<!--                .end()-->
-<!--                .appendTo('#top_slideshow');-->
-<!--        },  3000);-->
-<!--    </script>-->
+        setInterval(function() {
+            $('#top_slideshow > div:first')
+                .fadeOut(5000)
+                .next()
+                .fadeIn(5000)
+                .end()
+                .appendTo('#top_slideshow');
+        },  3000);
+    </script>
 </body>
 </html>

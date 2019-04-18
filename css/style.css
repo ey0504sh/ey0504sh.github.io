@@ -1,10 +1,12 @@
 #top_container {
     width: 100%;
-    height: 100%;
+    height: 600px;
     position: relative;
+    min-width: 900px;
 }
 #top_announcement,
-#top_slideshow {
+#top_slideshow,
+#top_image {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -15,8 +17,17 @@
     font-weight: 800;
     vertical-align: middle;
 }
-#top_slideshow > div {
+#top_image {
+    background-image: url('../gallery/900w/IMG_1529.jpg');
+    background-size: cover;
+}
+#top_slideshow > div{
     position: absolute;
+}
+#top_slideshow div img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 #top_announcement {
     z-index: 10;
@@ -36,6 +47,15 @@
     margin-block-start: 0.2em;
     margin-block-end: 0.2em;
     text-align: center;
+}
+#top_announcement h4 {
+    padding-bottom: 0.7em;
+}
+
+#countdown {
+    min-width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 #countdown ul {
@@ -67,25 +87,10 @@
     margin-block-end: 0.1em;
 }
 
-.center-cropped {
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-/* Set the image to fill its parent and make transparent */
-.center-cropped img {
-    top: 50%;
-    transform: translate(0%, 0%)
-}
-
 .dancing_script {
     font-family: 'Dancing Script'
 }
 
 .point_color {
     color: #9e9e9e;
-}
-
-body {
-   width: 900px
 }
