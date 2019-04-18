@@ -1,0 +1,91 @@
+#top_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#top_announcement,
+#top_slideshow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    font-family: "Dancing Script", "Nanum Brush Script";
+    font-size: 50px;
+    font-weight: 800;
+    vertical-align: middle;
+}
+#top_slideshow > div {
+    position: absolute;
+}
+#top_announcement {
+    z-index: 10;
+}
+#top_anouncement div {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+#top_announcement h2,
+#top_announcement h4 {
+    color: #c3c3c3;
+    margin-top: 0;
+    font-size: 1em;
+    line-height: 1em;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    text-align: center;
+}
+
+#countdown ul {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#countdown ul li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 0.7em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 4rem;
+}
+
+#countdown ul li h2,
+#countdown ul li h4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1em;
+    color: white;
+    margin-top: 0;
+    line-height: 1em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+}
+
+.center-cropped {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Set the image to fill its parent and make transparent */
+.center-cropped img {
+    top: 50%;
+    transform: translate(0%, 0%)
+}
+
+.dancing_script {
+    font-family: 'Dancing Script'
+}
+
+.point_color {
+    color: #9e9e9e;
+}
+
+body {
+   width: 900px
+}
