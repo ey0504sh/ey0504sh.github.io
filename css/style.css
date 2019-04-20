@@ -5,6 +5,15 @@
     max-width: 900px;
     min-width: 900px;
 }
+#content_container,
+#gallery_container {
+    width: 848px;
+    height: 100%;
+    position: relative;
+    border: 2px solid rgba(0, 82, 16, .2);
+    padding: 12px;
+    margin: 12px;
+}
 #top_announcement,
 #top_slideshow,
 #top_image {
@@ -95,11 +104,6 @@
     font-family: "Nanum Gothic";
     margin-block-start: 0.7em;
     margin-block-end: 0.1em;
-}
-
-#location img {
-    width: 100%;
-    min-width: 900px;
 }
 
 .dancing_script {
