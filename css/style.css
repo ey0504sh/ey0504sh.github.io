@@ -15,7 +15,8 @@
     margin: 12px;
 }
 #invitation_container,
-#calendar_container {
+#calendar_container,
+#contact_container {
     width: 848px;
     height: 100%;
     position: relative;
