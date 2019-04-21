@@ -193,6 +193,27 @@
     opacity: 0.7;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'one two'
+    'three four'
+    'footer footer';
+    grid-gap: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+}
+
+.grid-header { grid-area: header; }
+.grid-1 { grid-area: one; }
+.grid-2 { grid-area: two; }
+.grid-3 { grid-area: three; }
+.grid-4 { grid-area: four; }
+.grid-footer { grid-area: footer; }
+
 h2 {
     font-size: 4em;
 }
