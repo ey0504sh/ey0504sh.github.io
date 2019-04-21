@@ -137,6 +137,12 @@
     margin-block-end: 0.1em;
 }
 
+.inline_block {
+    display: inline-block;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.2em;
+}
+
 .g_announcement h4,
 .g_announcement h5,
 .g_announcement h6 {
@@ -179,7 +185,7 @@
 }
 
 .point_color {
-    color: #9e9e9e;
+    color: #005210;
 }
 
 .blur {
