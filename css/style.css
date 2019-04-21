@@ -31,7 +31,7 @@
     position: absolute;
     width: 100%;
     height: 600px;
-    font-family: "Dancing Script", "Nanum Brush Script";
+    font-family: "Dancing Script", "Hi Melody";
     font-size: 50px;
     font-weight: 800;
     vertical-align: middle;
@@ -104,6 +104,7 @@
     margin-block-end: 0.1em;
 }
 
+.announcement h3,
 .announcement h4,
 .announcement h5,
 .announcement h6 {
@@ -112,18 +113,17 @@
     margin-block-end: 0.1em;
 }
 .announcement h2 {
-    font-family: "Nanum Brush Script";
+    font-family: "Hi Melody";
     text-align: center;
     color: #005210;
-    font-size: 41px;
     margin-block-start: 0.7em;
     margin-block-end: 0.5em;
 }
 
 .announcement p {
-    font-family: "Nanum Brush Script";
+    font-family: "Hi Melody";
     text-align: center;
-    font-size: 32px;
+    font-size: 45px;
     margin-top: 0.7em;
     margin-bottom: 0.5em;
 }
@@ -145,10 +145,9 @@
     margin-block-end: 0.1em;
 }
 .g_announcement h2 {
-    font-family: "Nanum Brush Script";
+    font-family: "Hi Melody";
     text-align: center;
     color: #005210;
-    font-size: 41px;
     margin-block-start: 0.7em;
     margin-block-end: 0.5em;
 }
@@ -156,7 +155,7 @@
 .g_announcement p {
     font-family: "Nanum Gothic";
     text-align: center;
-    font-size: 32px;
+    font-size: 45px;
     margin-top: 0.7em;
     margin-bottom: 0.5em;
 }
@@ -188,6 +187,18 @@
     opacity: 0.7;
 }
 
+h2 {
+    font-size: 4em;
+}
+h3 {
+    font-size: 3em;
+}
+h4 {
+    font-size: 1.7em;
+}
+h5 {
+    font-size: 1.2em;
+}
 .hes-gallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
