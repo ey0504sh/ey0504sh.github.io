@@ -138,6 +138,8 @@ HesGallery.show = function(g,i) {
     ) this.elements.pic_cont.dataset.howmany =  `${this.currentImg+1}/${this.galleries[g].count}`;
     else  this.elements.pic_cont.dataset.howmany = '';
 
+    _gaq.push(['_trackEvent', 'gallery', 'show',  this.elements.pic_cont.dataset.howmany]);
+
     // Visibility of next/before buttons in gallery
     if(this.galleries[this.currentGal].imgPaths.length == 1) { // One image in gallery
         this.elements.b_prev.classList = 'hg-unvisible';
@@ -171,6 +173,7 @@ HesGallery.show = function(g,i) {
 }
 
 HesGallery.hide = function() {
+    _gaq.push(['_trackEvent', 'gallery', 'hide',  this.elements.pic_cont.dataset.howmany]);
     if(this.options.animations) this.elements.pic_cont.classList.add('hg-transition');
 
     this.elements.galery.classList='';
@@ -179,6 +182,7 @@ HesGallery.hide = function() {
 }
 
 HesGallery.next = function() {
+    _gaq.push(['_trackEvent', 'gallery', 'next on', this.elements.pic_cont.dataset.howmany]);
     if(this.galleries[this.currentGal].options.wrapAround && this.currentImg == this.galleries[this.currentGal].count-1)
         this.show(this.currentGal, 0);
     else if(this.currentImg+1 < this.galleries[this.currentGal].count)
@@ -186,6 +190,7 @@ HesGallery.next = function() {
 }
 
 HesGallery.prev = function() {
+    _gaq.push(['_trackEvent', 'gallery', 'prev on', this.elements.pic_cont.dataset.howmany]);
     if(this.galleries[this.currentGal].options.wrapAround && this.currentImg == 0)
         this.show(this.currentGal, this.galleries[this.currentGal].count-1);
     else if(this.currentImg+1 > 1)
@@ -193,5 +198,6 @@ HesGallery.prev = function() {
 }
 
 window.addEventListener('load', () => {
+    _gaq.push(['_trackEvent', 'gallery', 'init']);
     HesGallery.init();
 })
