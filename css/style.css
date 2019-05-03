@@ -199,6 +199,7 @@
     'header header'
     'one two'
     'three four'
+    'five six'
     'footer footer';
     grid-gap: 10px;
 }
@@ -212,6 +213,11 @@
 .grid-2 { grid-area: two; }
 .grid-3 { grid-area: three; }
 .grid-4 { grid-area: four; }
+.grid-5 { grid-area: five; }
+.grid-6 { grid-area: six; }
+.grid-6 h2 {
+
+}
 .grid-footer { grid-area: footer; }
 
 h2 {
